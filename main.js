@@ -22,7 +22,7 @@ $('.container').on('mouseenter',function(){
 }).on('mouseleave',function(){
   timer  = setInterval(function(){
     goToSlide(current + 1)
-  },2000)
+  },1000)
 })
 
 
