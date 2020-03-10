@@ -17,15 +17,25 @@ $(previous).on('click',function(){
 let timer = setInterval(function(){
   goToSlide(current + 1)
 },2000)
-$('.container').on('mouseenter',function(){
+// $('.container').on('mouseenter',function(){
+//   window.clearInterval(timer)
+// }).on('mouseleave',function(){
+//   timer  = setInterval(function(){
+//     goToSlide(current + 1)
+//   },1000)
+// })
+$('#oneSecond').on('click',function(){
   window.clearInterval(timer)
-}).on('mouseleave',function(){
-  timer  = setInterval(function(){
-    goToSlide(current + 1)
+  timer = setInterval(function(){
+      goToSlide(current+1)
   },1000)
 })
-
-
+$('#twoSecond').on('click',function(){
+  window.clearInterval(timer)
+  timer = setInterval(function(){
+      goToSlide(current+1)
+  },5000)
+})
 function bindEvents(){
   $('#buttonWrapper').on('click','button',function(e){
     let $button = $(e.currentTarget)
